@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Search V2</title>
+	<link
+  		href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="top-info">
+		<div class="left-info">
+			<div class="weather-info">
+				<i class="ri-sun-line"></i>
+				<p class="weather-title">35° C</p>			
+			</div>
+		</div>	
+		<div class="center-info">
+			<div class="notification-container">
+				<div class="notification-icon">
+					<i class="ri-notification-badge-line"></i>		
+				</div>			
+				<p class="notification-title">Popup Website Notification</p>		
+			</div>
+		</div>
+		<div class="right-info">
+			<div id="clock">00:00:00</div>		
+		</div>
+	</div>
+	<div class="bottom-nav">
+		<div class="optional-items">
+			<ul class="optional-list">
+				<li class="optional-item">
+					<a class="optional-link">
+						<i class="ri-history-line" style="--colorful: #CE82FF;"></i>					
+					</a>				
+				</li>
+				<li class="optional-item">
+					<a class="optional-link">
+						<i class="ri-settings-4-line" style="--colorful: #00D084;"></i>				
+					</a>				
+				</li>
+			</ul>		
+		</div>
+		<nav class="nav-container">
+			<ul class="nav-item">
+				<li class="item-list">
+					<a style="--background: #00D084;">
+						<i class="ri-mail-line" style="--colorful: #00D084;"></i>					
+					</a>				
+				</li>			
+				<li class="item-list">
+					<a>
+						<i class="ri-image-line" style="--colorful: #1CB0F6;"></i>				
+					</a>				
+				</li>		
+				<li class="item-list">
+					<a>
+						<i class="ri-flask-line" style="--colorful: #FFC800;"></i>				
+					</a>				
+				</li>		
+				<li class="item-list">
+					<a>
+						<i class="ri-bubble-chart-line" style="--colorful: #FF4B4B;"></i>				
+					</a>				
+				</li>		
+			</ul>
+		</nav>	
+	</div>
+	<div class="center-items">	
+	
+	<script>
+		function showTime() {
+			let date = new Date();
+			let h = date.getHours();
+			let m = date.getMinutes();
+			let s = date.getSeconds();
+			
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+			
+			let time = h + ":" + m + ":" + s;
+			document.getElementById("clock").innerText = time;
+		}	
+		
+		setInterval(showTime, 1000);
+		showTime();
+	</script>
+		<div class="logo">
+			<img src="./img/logo.svg" alt="logo">
+		</div>
+		<div class="search-area">
+			<div class="search-logo">
+				<i class="ri-search-line"></i>			
+			</div>
+			<div class="text-input">
+				<input class="input-search">	
+			</div>
+			<div class="left-items">
+				<i class="ri-mic-line"></i>
+				<i class="ri-camera-lens-ai-line"></i>
+				<div class="ai-mode">
+					<i class="ri-search-ai-line"></i>				
+					<p>Mode AI</p>
+				</div>
+			</div>
+		</div>
+		<div class="filter-container">
+			<div class="filter-items">
+				<li class="filter-item-list">
+					<i class="ri-circle-line" style="--colorful: #00D084;"></i>
+					<p class="filter-title">Semua</p>
+				</li>
+				<li class="filter-item-list">
+					<i class="ri-newspaper-line" style="--colorful: #1CB0F6;"></i>
+					<p class="filter-title">Berita</p>
+				</li>
+				<li class="filter-item-list">
+					<i class="ri-video-line" style="--colorful: #FFC800;"></i>
+					<p class="filter-title">Video</p>
+				</li>
+				<li class="filter-item-list">
+					<i class="ri-shopping-bag-line" style="--colorful: #FF4B4B;"></i>
+					<p class="filter-title">Shopping</p>
+				</li>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
