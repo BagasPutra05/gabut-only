@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tycoon Mengetik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ketikan Sultan</h1>
+        <div id="status-bar">
+            <p>Uang: $<span id="uang">0</span></p>
+            <p>Posisi: <span id="posisi">Magang</span></p>
+            <p>Pendapatan: $<span id="pendapatan">1</span>/kata</p>
+        </div>
+        <nav>
+            <button onclick="bukaHalaman('kerja')">💻 Ruang Kerja</button>
+            <button onclick="bukaHalaman('belanja')">🛒 Pusat Belanja</button>
+            <button onclick="bukaHalaman('koleksi')">💎 Koleksi Saya</button>
+        </nav>
+    </header>
+
+    <main id="halaman-kerja" class="halaman">
+        <h2>Ayo Bekerja!</h2>
+        <p>Ketik kode captcha di bawah ini untuk menghasilkan uang:</p>
+        <div class="area-ketik">
+            <h3 id="kata-target">mulai</h3>
+            <input type="text" id="input-ketik" placeholder="Ketik di sini..." autocomplete="off">
+        </div>
+    </main>
+
+    <main id="halaman-belanja" class="halaman tersembunyi">
+      <h2>Pusat Belanja</h2>
+      <p>Pilih kategori untuk melihat katalog barang mewah:</p>
+      
+      <div class="kategori-toko">
+          <button onclick="tampilkanKategori('Promosi')">📈 Promosi</button>
+          <button onclick="tampilkanKategori('Jam Tangan')">⌚ Jam Tangan</button>
+          <button onclick="tampilkanKategori('Mobil')">🚗 Mobil</button>
+          <button onclick="tampilkanKategori('Pesawat')">✈️ Pesawat</button>
+          <button onclick="tampilkanKategori('Pulau')">🏝️ Pulau</button>
+          <button onclick="tampilkanKategori('Properti')">🏰 Properti</button>
+      </div>
+
+      <div id="daftar-barang" class="grid-container">
+          </div>
+  </main>
+
+    <main id="halaman-koleksi" class="halaman tersembunyi">
+        <h2>Koleksi Pribadi</h2>
+        <p>Aset mewah yang berhasil kamu kumpulkan:</p>
+        <div id="daftar-koleksi" class="koleksi-container">
+            <p>Belum ada koleksi. Ayo mulai bekerja!</p>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
